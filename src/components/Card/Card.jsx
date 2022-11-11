@@ -1,4 +1,21 @@
 const Card = () => {
+  const switchButton = document.getElementById("switch");
+  const pricing_tags = document.querySelectorAll("p.price-number");
+  const pricing_monthly = [24.99, 39.99];
+  const pricing_annually = [249.99, 399.99];
+
+  switchButton.onclick = () => {
+    switchButton.classList.toggle("monthly");
+    if (!switchButton.classList.contains("monthly")) {
+      pricing_tags.forEach((pricing_tag, index) => {
+        pricing_tag.textContent = `$${pricing_annually[index]} per year`;
+      });
+    } else {
+      pricing_tags.forEach((pricing_tag, index) => {
+        pricing_tag.textContent = `$${pricing_monthly[index]} per month`;
+      });
+    }
+  };
   return (
     <div className="container">
       <header>
@@ -18,32 +35,34 @@ const Card = () => {
             alt="meditating woman"
           />
           <p className="plan text-small text-gray">Starter</p>
-          <div className="price text-black">
-            <p className="price-number text-xl">
+          <div className="price text-black text-xl">
+            <p>
               <strong>Free</strong>
             </p>
+            {/* <p className="price-number text-xl"></p> */}
           </div>
           <ul className="features text-default text-gray">
             <li className="item">
-              <span>Full courses library</span>
+              <span>&#x2713;</span>
+              Full courses library
             </li>
             <li className="item">
-              <span>A new daily meditation</span>
+              <span>&#x2713;</span>A new daily meditation
             </li>
             <li className="item">
-              <span>Access to the meditation guru</span>
+              <span>&#x2713;</span>Access to the meditation guru
             </li>
             <li className="item-not-available">
-              <span>Sleep podcasts and exercises</span>
+              <span>&#x2713;</span>Sleep podcasts and exercises
             </li>
             <li className="item-not-available">
-              <span>Mindfulness exercises</span>
+              <span>&#x2713;</span>Mindfulness exercises
             </li>
             <li className="item-not-available">
-              <span>Guided meditations</span>
+              <span>&#x2713;</span>Guided meditations
             </li>
             <li className="item-not-available">
-              <span>Cooking recipes</span>
+              <span>&#x2713;</span>Cooking recipes
             </li>
           </ul>
           <div className="center-btn">
@@ -58,36 +77,37 @@ const Card = () => {
             alt="meditating woman"
           />
           <div className="price text-white">
-            <p className="price-number text-small">
+            <p>
               <strong>Pro</strong>
             </p>
-            <p className="unit text-xl">
+            <p className="price-number text-xl"></p>
+            {/* <p className="unit text-xl">
               <strong>
                 <span>&#36;</span>49
               </strong>
-            </p>
+            </p> */}
           </div>
           <ul className="features text-default text-white">
             <li className="item">
-              <span>Full courses library</span>
+              <span>&#x2713;</span>Full courses library
             </li>
             <li className="item">
-              <span>A new daily meditation</span>
+              <span>&#x2713;</span>A new daily meditation
             </li>
             <li className="item">
-              <span>Access to the meditation guru</span>
+              <span>&#x2713;</span>Access to the meditation guru
             </li>
             <li className="item">
-              <span>Sleep podcasts and exercises</span>
+              <span>&#x2713;</span>Sleep podcasts and exercises
             </li>
             <li className="item">
-              <span>Mindfulness exerrcises</span>
+              <span>&#x2713;</span>Mindfulness exerrcises
             </li>
             <li className="item-not-available">
-              <span>Guided meditations</span>
+              <span>&#x2713;</span>Guided meditations
             </li>
             <li className="item-not-available">
-              <span>Cooking recipes</span>
+              <span>&#x2713;</span>Cooking recipes
             </li>
           </ul>
           <div>
@@ -101,36 +121,36 @@ const Card = () => {
           />
 
           <div className="price text-black">
-            <p className="price-number text-small">
+            <p>
               <strong>Teams</strong>
             </p>
-            <p className="unit text-xl">
-              <strong>
+            <p className="price-number text-xl"></p>
+            {/* <p className="unit text-xl">              <strong>
                 <span>&#36;</span>99
               </strong>
-            </p>
+            </p> */}
           </div>
           <ul className="features text-default text-gray">
             <li className="item">
-              <span>Full courses library</span>
+              <span>&#x2713;</span>Full courses library
             </li>
             <li className="item">
-              <span>A new daily meditation</span>
+              <span>&#x2713;</span>A new daily meditation
             </li>
             <li className="item">
-              <span>Access to the meditation guru</span>
+              <span>&#x2713;</span>Access to the meditation guru
             </li>
             <li className="item">
-              <span>Sleep podcasts and exercises</span>
+              <span>&#x2713;</span>Sleep podcasts and exercises
             </li>
             <li className="item">
-              <span>Mindfulness exerrcises</span>
+              <span>&#x2713;</span>Mindfulness exerrcises
             </li>
             <li className="item">
-              <span>Guided meditations</span>
+              <span>&#x2713;</span>Guided meditations
             </li>
             <li className="item">
-              <span>Cooking recipes</span>
+              <span>&#x2713;</span>Cooking recipes
             </li>
           </ul>
           <div>
@@ -142,15 +162,15 @@ const Card = () => {
       </main>
       <footer>
         <div className="attribution">
-          Challenge by
+          <span class="footer-margin">Challenge by</span>
           <a
             href="hhttps://nuwe.io/dev/challenges/jump2digital2022-frontend"
             target="_blank"
           >
-            JumpToDigital2022 Hackathon entry
+            Jump2Digital2022 Frontend Hackathon Entry - Nuwe
           </a>
-          || Coded with ❤️
-          <a href="https://github.com/PabloParra">Pabl0Parra</a>.
+          <span className="footer-margin">| Coded with ❤️ by</span>
+          <a href="https://github.com/PabloParra">Pabl0Parra</a>
         </div>
       </footer>
     </div>
