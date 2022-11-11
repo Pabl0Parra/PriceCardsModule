@@ -1,0 +1,12 @@
+img {
+  width: 20%;
+}
+
+li {
+  list-style-type: "\2713"; // checkmark
+}
+
+li span {
+  position: relative;
+  left: 1rem;
+}
