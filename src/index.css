@@ -14,7 +14,8 @@
   --GrayishBlue: hsl(233, 13%, 49%);
   --DarkGrayishBlue: hsl(232, 13%, 33%);
   --PureWhite: #fff;
-  --bg-purple: linear-gradient(135deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  --bg-blue: #5a45f2;
+  --bg-black: #000;
   --border-gray: rgba(110, 114, 142, 25%);
   --border-white: rgba(255, 255, 255, 25%);
 }
@@ -88,38 +89,124 @@ html {
   display: flex;
   justify-content: center;
   cursor: pointer;
-  padding: 1.4rem 0;
-  text-transform: uppercase;
+  padding: 1rem 9rem;
   border-radius: 6px;
   transition: all 0.3s ease;
+  font-size: ;
 }
 .btn:hover {
   transform: translateY(-2px);
 }
+
+.center-btn {
+  display: flex;
+  justify-content: center;
+}
 .btn p {
   letter-spacing: 1.39px;
 }
-.btn-purple {
-  background: var(--bg-purple);
-  color: var(--PureWhite);
-}
-.btn-purple:hover {
-  background: transparent;
-  color: var(--LightPurple);
-  box-shadow: inset 0px 0px 0px 1px var(--LightPurple);
-}
 .btn-white {
   background-color: var(--PureWhite);
-  color: var(--LightPurple);
+  color: var(--bg-black);
+  border: 1px solid var(--bg-blue);
 }
 .btn-white:hover {
   background: transparent;
+  font-size: 1.2rem;
   box-shadow: inset 0px 0px 0px 1px var(--PureWhite);
+  border: 1px solid var(--bg-black);
+  color: var(--bg-blue);
+}
+
+.btn-black {
+  background: var(--bg-black);
   color: var(--PureWhite);
 }
 
+.btn-black:hover {
+  background: var(--PureWhite);
+  color: var(--bg-black);
+  box-shadow: inset 0px 0px 0px 1px var(--LightPurple);
+}
+.btn-blue {
+  background: var(--bg-blue);
+  color: var(--PureWhite);
+  border: none;
+}
+.btn-blue:hover {
+  background: var(--PureWhite);
+  color: var(--bg-black);
+  box-shadow: inset 0px 0px 0px 1px var(--LightPurple);
+}
+
+.container {
+  box-sizing: border-box;
+  min-width: 375px;
+  padding: 0 2.4rem;
+}
+.card {
+  box-shadow: 0px 20px 40px rgba(212, 210, 244, 50%);
+  text-align: left;
+}
+/* mobile spacing */
+header {
+  margin-top: 6.4rem;
+}
+.price-toggler {
+  margin-top: 4.2rem;
+}
+main {
+  margin-top: 8rem;
+}
+.card {
+  padding: 3.1rem 2.9rem;
+  box-sizing: border-box;
+  max-width: 327px;
+  margin: 0 auto;
+}
+.card:not(:last-child) {
+  margin-bottom: 3.2rem;
+}
+
+.card-purple-bg {
+  background-color: #5a45f2;
+}
+/* content within card */
+p.plan {
+  line-height: 1.55;
+  margin-top: 0.5rem;
+}
+.price {
+  margin-bottom: 2.5rem;
+}
+p.unit {
+  letter-spacing: -1.2px;
+  margin-right: 0.746rem;
+}
+p.price-number {
+  line-height: 0.986;
+  /* letter-spacing: -2.16px; */
+}
+ul {
+  margin-bottom: 3.2rem;
+}
+ul li {
+  padding: 1.2rem 0;
+  line-height: 1;
+}
+
+.card-white-bg ul li:last-child {
+}
+.card-purple-bg ul li {
+}
+.card-purple-bg ul li:last-child {
+}
+
+/* check this placement below */
+
 img {
-  width: 10%;
+  width: 60%;
+  margin: 0 25%;
 }
 
 li {
@@ -129,4 +216,8 @@ li {
 li span {
   position: relative;
   left: 1rem;
+}
+
+.item-not-available {
+  opacity: 0.3;
 }

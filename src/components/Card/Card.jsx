@@ -14,10 +14,10 @@ const Card = () => {
       <main>
         <div className="card card-white-bg">
           <img
-            src="https://res.cloudinary.com/dcwx2biey/image/upload/v1668186622/5184247_n0rgg8.jpg"
+            src="https://res.cloudinary.com/dcwx2biey/image/upload/v1668188882/ODUwNzM3NDU1-removebg-preview_sfgvkt.png"
             alt="meditating woman"
           />
-          <p className="plan text-l text-gray">Starter</p>
+          <p className="plan text-small text-gray">Starter</p>
           <div className="price text-black">
             <p className="price-number text-xl">
               <strong>Free</strong>
@@ -46,21 +46,22 @@ const Card = () => {
               <span>Cooking recipes</span>
             </li>
           </ul>
-          <div className="btn btn-purple text-small">
-            <button>Get started</button>
+          <div className="center-btn">
+            <button className="btn btn-white text-small">
+              <strong>Get started</strong>
+            </button>
           </div>
         </div>
         <div className="card card-purple-bg">
           <img
-            src="https://res.cloudinary.com/dcwx2biey/image/upload/v1668186832/ODUwNzM3NDU1_gsp5lu.jpg"
+            src="https://res.cloudinary.com/dcwx2biey/image/upload/v1668190482/5184247-removebg-preview_urqwgn.png"
             alt="meditating woman"
           />
-          <p className="plan text-l text-white">Professional</p>
           <div className="price text-white">
-            <p className="price-number text-xl">
+            <p className="price-number text-small">
               <strong>Pro</strong>
             </p>
-            <p className="unit text-xxl">
+            <p className="unit text-xl">
               <strong>
                 <span>&#36;</span>49
               </strong>
@@ -89,21 +90,21 @@ const Card = () => {
               <span>Cooking recipes</span>
             </li>
           </ul>
-          <div className="btn btn-white text-small">
-            <button>Become a Pro</button>
+          <div>
+            <button className="btn btn-black text-small">Become a Pro</button>
           </div>
         </div>
         <div className="card card-white-bg">
           <img
-            src="https://res.cloudinary.com/dcwx2biey/image/upload/v1668187017/9813_ipmq8w.jpg"
+            src="https://res.cloudinary.com/dcwx2biey/image/upload/v1668190334/res-console.cloudinary-removebg-preview_1_kfcu6t.png"
             alt="meditating woman"
           />
-          <p className="plan text-l text-gray">Master</p>
+
           <div className="price text-black">
-            <p className="price-number text-xl">
+            <p className="price-number text-small">
               <strong>Teams</strong>
             </p>
-            <p className="unit text-xxl">
+            <p className="unit text-xl">
               <strong>
                 <span>&#36;</span>99
               </strong>
@@ -132,8 +133,10 @@ const Card = () => {
               <span>Cooking recipes</span>
             </li>
           </ul>
-          <div className="btn btn-purple text-small">
-            <button>Get Teams</button>
+          <div>
+            <button className="btn btn-blue text-small">
+              <strong>Get Teams</strong>
+            </button>
           </div>
         </div>
       </main>
