@@ -1,36 +1,51 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
+import AnimatedText from "./AnimatedText";
 
 const Cards = () => {
-  const switchButton = document.getElementById("switch");
-  const pricing_tags = document.querySelectorAll("p.price-number");
-  const pricing_monthly = [24.99, 39.99];
-  const pricing_annually = [249.99, 399.99];
+  // const switchButton = document.getElementById("switch");
+  // const pricing_tags = document.querySelectorAll("p.price-number");
+  // const pricing_monthly = [24.99, 39.99];
+  // const pricing_annually = [249.99, 399.99];
 
-  switchButton.onclick = () => {
-    switchButton.classList.toggle("monthly");
-    if (!switchButton.classList.contains("monthly")) {
-      pricing_tags.forEach((pricing_tag, index) => {
-        pricing_tag.textContent = `$${pricing_annually[index]} / year`;
-      });
-    } else {
-      pricing_tags.forEach((pricing_tag, index) => {
-        pricing_tag.textContent = `$${pricing_monthly[index]} / month`;
-      });
-    }
+  // switchButton.onclick = () => {
+  //   switchButton.classList.toggle("monthly");
+  //   if (!switchButton.classList.contains("monthly")) {
+  //     pricing_tags.forEach((pricing_tag, index) => {
+  //       pricing_tag.textContent = `$${pricing_annually[index]} / year`;
+  //     });
+  //   } else {
+  //     pricing_tags.forEach((pricing_tag, index) => {
+  //       pricing_tag.textContent = `$${pricing_monthly[index]} / month`;
+  //     });
+  //   }
+  // };
+
+  const [replay, setReplay] = useState(true);
+  // Placeholder text data, as if from API
+  const placeholderText = [{ type: "heading1", text: "Our Prices" }];
+
+  const container = {
+    visible: {
+      transition: {
+        staggerChildren: 0.025,
+      },
+    },
   };
+
   return (
     <div className="container">
       <motion.header
-        animate={{ x: [50, 100, 0], opacity: 1, scale: 1 }}
-        transition={{
-          duration: 3,
-          delay: 0.3,
-          ease: [0.5, 0.71, 1, 1.5],
-        }}
-        initial={{ opacity: 0, scale: 0.5 }}
-        whileHover={{ scale: 1.2 }}
+        initial="hidden"
+        // animate="visible"
+        animate={replay ? "visible" : "hidden"}
+        variants={container}
       >
-        <h1 className="text-xl text-gray">Our Pricing</h1>
+        <motion.h1 className="text-l text-gray animation-h1">
+          {placeholderText.map((item, index) => {
+            return <AnimatedText {...item} key={index} />;
+          })}
+        </motion.h1>
         <div className="price-toggler">
           <p className="text-lightgray text-default">Annually</p>
           <div id="switch">

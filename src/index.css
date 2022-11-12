@@ -209,7 +209,7 @@ footer a {
 }
 /* mobile spacing */
 header {
-  margin-top: 6.4rem;
+  margin-top: 4rem;
 }
 
 main {
@@ -226,7 +226,7 @@ p.plan {
   margin-top: 0.5rem;
 }
 .price {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 p.unit {
   letter-spacing: -1.2px;
@@ -288,7 +288,7 @@ li span {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1240px) {
   :root {
     font-size: 62.5%;
   }
@@ -297,6 +297,10 @@ li span {
   }
   header {
     margin-top: 7.1rem;
+  }
+
+  h1 {
+    font-size: text-xxl;
   }
   .price-toggler {
     margin-top: 4rem;
