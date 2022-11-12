@@ -3,23 +3,23 @@ import { motion } from "framer-motion";
 import AnimatedText from "./AnimatedText";
 
 const Cards = () => {
-  // const switchButton = document.getElementById("switch");
-  // const pricing_tags = document.querySelectorAll("p.price-number");
-  // const pricing_monthly = [24.99, 39.99];
-  // const pricing_annually = [249.99, 399.99];
+  const switchButton = document.getElementById("switch");
+  const pricing_tags = document.querySelectorAll("p.price-number");
+  const pricing_monthly = [24.99, 39.99];
+  const pricing_annually = [249.99, 399.99];
 
-  // switchButton.onclick = () => {
-  //   switchButton.classList.toggle("monthly");
-  //   if (!switchButton.classList.contains("monthly")) {
-  //     pricing_tags.forEach((pricing_tag, index) => {
-  //       pricing_tag.textContent = `$${pricing_annually[index]} / year`;
-  //     });
-  //   } else {
-  //     pricing_tags.forEach((pricing_tag, index) => {
-  //       pricing_tag.textContent = `$${pricing_monthly[index]} / month`;
-  //     });
-  //   }
-  // };
+  switchButton.onclick = () => {
+    switchButton.classList.toggle("monthly");
+    if (!switchButton.classList.contains("monthly")) {
+      pricing_tags.forEach((pricing_tag, index) => {
+        pricing_tag.textContent = `$${pricing_annually[index]} / year`;
+      });
+    } else {
+      pricing_tags.forEach((pricing_tag, index) => {
+        pricing_tag.textContent = `$${pricing_monthly[index]} / month`;
+      });
+    }
+  };
 
   const placeholderText = [{ type: "heading1", text: "Our Prices" }];
 
@@ -33,11 +33,7 @@ const Cards = () => {
 
   return (
     <div className="container">
-      <motion.header
-        initial="hidden"
-        animate={replay ? "visible" : "hidden"}
-        variants={container}
-      >
+      <motion.header initial="hidden" animate={"visible"} variants={container}>
         <motion.h1 className="text-l text-gray animation-h1">
           {placeholderText.map((item, index) => {
             return <AnimatedText {...item} key={index} />;
