@@ -60,16 +60,14 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 4.2rem;
 }
 
-.card {
-  border-radius: 1rem;
-}
 .card-white-bg {
   background-color: var(--PureWhite);
 }
 .card-purple-bg {
-  background: var(--bg-purple);
+  background: var(--bg-blue);
 }
 footer {
   margin: 5rem 0;
@@ -202,14 +200,13 @@ footer a {
 .card {
   box-shadow: 0px 20px 40px rgba(212, 210, 244, 50%);
   text-align: left;
+  border-radius: 1rem;
 }
 /* mobile spacing */
 header {
   margin-top: 6.4rem;
 }
-.price-toggler {
-  margin-top: 4.2rem;
-}
+
 main {
   margin-top: 8rem;
 }
@@ -223,9 +220,6 @@ main {
   margin-bottom: 3.2rem;
 }
 
-.card-purple-bg {
-  background-color: #5a45f2;
-}
 /* content within card */
 p.plan {
   line-height: 1.55;
