@@ -142,7 +142,7 @@ footer a {
   display: flex;
   justify-content: center;
   cursor: pointer;
-  padding: 1rem 10rem;
+  padding: 1rem 9rem;
   border-radius: 6px;
   transition: all 0.3s ease;
 }
@@ -164,10 +164,11 @@ footer a {
 }
 .btn-white:hover {
   background: transparent;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   box-shadow: inset 0px 0px 0px 1px var(--PureWhite);
-  border: 1px solid var(--bg-black);
-  color: var(--bg-blue);
+
+  background-color: var(--bg-blue);
+  color: var(--PureWhite);
 }
 
 .btn-black {
@@ -201,6 +202,10 @@ footer a {
   box-shadow: 0px 20px 40px rgba(212, 210, 244, 50%);
   text-align: left;
   border-radius: 1rem;
+  padding: 2.1rem 2.9rem;
+  box-sizing: border-box;
+  max-width: 327px;
+  margin: 0 auto;
 }
 /* mobile spacing */
 header {
@@ -210,12 +215,7 @@ header {
 main {
   margin-top: 8rem;
 }
-.card {
-  padding: 2.1rem 2.9rem;
-  box-sizing: border-box;
-  max-width: 327px;
-  margin: 0 auto;
-}
+
 .card:not(:last-child) {
   margin-bottom: 3.2rem;
 }
