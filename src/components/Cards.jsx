@@ -21,8 +21,6 @@ const Cards = () => {
   //   }
   // };
 
-  const [replay, setReplay] = useState(true);
-  // Placeholder text data, as if from API
   const placeholderText = [{ type: "heading1", text: "Our Prices" }];
 
   const container = {
@@ -37,7 +35,6 @@ const Cards = () => {
     <div className="container">
       <motion.header
         initial="hidden"
-        // animate="visible"
         animate={replay ? "visible" : "hidden"}
         variants={container}
       >
