@@ -43,7 +43,7 @@ const AnimatedCharacters = (props) => {
   }
 
   // Add a space ("\u00A0") to the end of each word
-  words.map((word) => {
+  words.forEach((word) => {
     return word.push("\u00A0");
   });
 
@@ -77,7 +77,6 @@ const AnimatedCharacters = (props) => {
           </Wrapper>
         );
       })}
-      {/* {} */}
     </Tag>
   );
 };
