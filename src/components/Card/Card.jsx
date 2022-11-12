@@ -8,11 +8,11 @@ const Card = () => {
     switchButton.classList.toggle("monthly");
     if (!switchButton.classList.contains("monthly")) {
       pricing_tags.forEach((pricing_tag, index) => {
-        pricing_tag.textContent = `$${pricing_annually[index]} per year`;
+        pricing_tag.textContent = `$${pricing_annually[index]} / year`;
       });
     } else {
       pricing_tags.forEach((pricing_tag, index) => {
-        pricing_tag.textContent = `$${pricing_monthly[index]} per month`;
+        pricing_tag.textContent = `$${pricing_monthly[index]} / month`;
       });
     }
   };
@@ -36,9 +36,7 @@ const Card = () => {
           />
           <p className="plan text-small text-gray">Starter</p>
           <div className="price text-black text-xl">
-            <p>
-              <strong>Free</strong>
-            </p>
+            <p className="text-pureBlack">Free</p>
             {/* <p className="price-number text-xl"></p> */}
           </div>
           <ul className="features text-default text-gray">
@@ -77,15 +75,8 @@ const Card = () => {
             alt="meditating woman"
           />
           <div className="price text-white">
-            <p>
-              <strong>Pro</strong>
-            </p>
-            <p className="price-number text-xl"></p>
-            {/* <p className="unit text-xl">
-              <strong>
-                <span>&#36;</span>49
-              </strong>
-            </p> */}
+            <p>Pro</p>
+            <p className="price-number text-xl">$249.99 / year</p>
           </div>
           <ul className="features text-default text-white">
             <li className="item">
@@ -110,7 +101,7 @@ const Card = () => {
               <span>&#x2713;</span>Cooking recipes
             </li>
           </ul>
-          <div>
+          <div className="center-btn">
             <button className="btn btn-black text-small">Become a Pro</button>
           </div>
         </div>
@@ -121,10 +112,10 @@ const Card = () => {
           />
 
           <div className="price text-black">
-            <p>
-              <strong>Teams</strong>
+            <p>Teams</p>
+            <p className="price-number text-pureBlack text-xl">
+              $399.99 / year
             </p>
-            <p className="price-number text-xl"></p>
             {/* <p className="unit text-xl">              <strong>
                 <span>&#36;</span>99
               </strong>
@@ -153,7 +144,7 @@ const Card = () => {
               <span>&#x2713;</span>Cooking recipes
             </li>
           </ul>
-          <div>
+          <div className="center-btn">
             <button className="btn btn-blue text-small">
               <strong>Get Teams</strong>
             </button>

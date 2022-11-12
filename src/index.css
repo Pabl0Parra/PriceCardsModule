@@ -78,14 +78,13 @@ footer {
 
 footer a {
   color: var(--LightPurple);
-  text-decoration: underline;
 }
 
 #switch {
   width: 56px;
   height: 32px;
   border-radius: 16px;
-  background: var(--bg-purple);
+  background: var(--bg-blue);
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -129,6 +128,9 @@ footer a {
 .text-black {
   color: var(--DarkGrayishBlue);
 }
+.text-pureBlack {
+  color: var(--bg-black);
+}
 .text-white {
   color: var(--PureWhite);
 }
@@ -142,7 +144,7 @@ footer a {
   display: flex;
   justify-content: center;
   cursor: pointer;
-  padding: 1rem 9rem;
+  padding: 1rem 10rem;
   border-radius: 6px;
   transition: all 0.3s ease;
 }
@@ -192,14 +194,6 @@ footer a {
 }
 
 /* mobile styles */
-
-/* body {
-  background-image: url(./images/bg-top.svg);
-  background-repeat: no-repeat;
-  /* this position needs a lot of adjustments 
-  background-position: 191px -35px;
-} */
-
 .container {
   box-sizing: border-box;
   min-width: 375px;
@@ -220,7 +214,7 @@ main {
   margin-top: 8rem;
 }
 .card {
-  padding: 3.1rem 2.9rem;
+  padding: 2.1rem 2.9rem;
   box-sizing: border-box;
   max-width: 327px;
   margin: 0 auto;
@@ -244,10 +238,7 @@ p.unit {
   letter-spacing: -1.2px;
   margin-right: 0.746rem;
 }
-/* p.price-number {
-  line-height: 0.986;
-  /* letter-spacing: -2.16px; 
-} */
+
 ul {
   margin-bottom: 3.2rem;
 }
@@ -255,15 +246,6 @@ ul li {
   padding: 1.2rem 0;
   line-height: 1;
 }
-
-.card-white-bg ul li:last-child {
-}
-.card-purple-bg ul li {
-}
-.card-purple-bg ul li:last-child {
-}
-
-/* check this placement below */
 
 img {
   width: 60%;
@@ -283,6 +265,55 @@ li span {
   margin: 0 0.5rem;
 }
 
-a {
-  text-decoration: none !important;
+@media screen and (min-width: 960px) {
+  :root {
+    font-size: 55%;
+  }
+
+  main {
+    margin-top: 6.4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .container {
+    padding: 0 18rem;
+  }
+  .card:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .card {
+    margin: initial;
+    min-width: 327px;
+  }
+
+  .card:nth-child(2) {
+    padding: 5rem 3.1rem;
+    margin: 0 2%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  :root {
+    font-size: 62.5%;
+  }
+  .container {
+    padding: 0 19.5rem;
+  }
+  header {
+    margin-top: 7.1rem;
+  }
+  .price-toggler {
+    margin-top: 4rem;
+  }
+  .card {
+    min-width: 350px;
+  }
+  .card:not(:nth-child(2)) {
+    padding: 3.1rem;
+  }
+  .card:nth-child(2) {
+    padding: 1.5rem 3.1rem;
+  }
 }
