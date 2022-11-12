@@ -1,4 +1,6 @@
-const Card = () => {
+import { motion } from "framer-motion";
+
+const Cards = () => {
   const switchButton = document.getElementById("switch");
   const pricing_tags = document.querySelectorAll("p.price-number");
   const pricing_monthly = [24.99, 39.99];
@@ -18,7 +20,16 @@ const Card = () => {
   };
   return (
     <div className="container">
-      <header>
+      <motion.header
+        animate={{ x: [50, 100, 0], opacity: 1, scale: 1 }}
+        transition={{
+          duration: 3,
+          delay: 0.3,
+          ease: [0.5, 0.71, 1, 1.5],
+        }}
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileHover={{ scale: 1.2 }}
+      >
         <h1 className="text-xl text-gray">Our Pricing</h1>
         <div className="price-toggler">
           <p className="text-lightgray text-default">Annually</p>
@@ -27,9 +38,9 @@ const Card = () => {
           </div>
           <p className="text-lightgray text-default">Monthly</p>
         </div>
-      </header>
+      </motion.header>
       <main>
-        <div className="card card-white-bg">
+        <motion.div className="card card-white-bg" whileHover={{ scale: 1.1 }}>
           <img
             src="https://res.cloudinary.com/dcwx2biey/image/upload/v1668188882/ODUwNzM3NDU1-removebg-preview_sfgvkt.png"
             alt="meditating woman"
@@ -68,8 +79,8 @@ const Card = () => {
               <strong>Get started</strong>
             </button>
           </div>
-        </div>
-        <div className="card card-purple-bg">
+        </motion.div>
+        <motion.div className="card card-purple-bg" whileHover={{ scale: 1.1 }}>
           <img
             src="https://res.cloudinary.com/dcwx2biey/image/upload/v1668190482/5184247-removebg-preview_urqwgn.png"
             alt="meditating woman"
@@ -104,8 +115,8 @@ const Card = () => {
           <div className="center-btn">
             <button className="btn btn-black text-small">Become a Pro</button>
           </div>
-        </div>
-        <div className="card card-white-bg">
+        </motion.div>
+        <motion.div className="card card-white-bg" whileHover={{ scale: 1.1 }}>
           <img
             src="https://res.cloudinary.com/dcwx2biey/image/upload/v1668190334/res-console.cloudinary-removebg-preview_1_kfcu6t.png"
             alt="meditating woman"
@@ -149,7 +160,7 @@ const Card = () => {
               <strong>Get Teams</strong>
             </button>
           </div>
-        </div>
+        </motion.div>
       </main>
       <footer>
         <div className="attribution">
@@ -168,4 +179,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default Cards;
