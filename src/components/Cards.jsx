@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import AnimatedText from "./AnimatedText";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+import "animate.css";
 
 const Cards = () => {
   const placeholderText = [{ type: "heading1", text: "Our Prices" }];
@@ -12,6 +15,48 @@ const Cards = () => {
     },
   };
 
+  const Modal = ({ value: email }) => {
+    const MySwal = withReactContent(Swal);
+
+    MySwal.fire({
+      imageUrl:
+        "https://res.cloudinary.com/dcwx2biey/image/upload/v1668365098/177-envelope-mail-send-flat_1_vxzgfv.gif",
+      imageHeight: 140,
+      imageAlt: "a letter",
+      title: "Send us your email for additional info",
+      input: "email",
+      inputLabel: "Your email address",
+      inputPlaceholder: "Enter your email address",
+      showCloseButton: true,
+      showCancelButton: true,
+      cancelButtonText: "Cancel",
+      confirmButtonColor: "#5a45f2",
+      backdrop: `rgba(0,0,123,0.2)`,
+      showClass: {
+        popup: "animate__animated animate__fadeInDown",
+      },
+      hideClass: {
+        popup: "animate__animated animate__fadeOutDown",
+      },
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Check your mail for additional info",
+          confirmButtonColor: "#5a45f2",
+          icon: "success",
+          showClass: {
+            popup: "animate__animated animate__fadeInUp",
+          },
+          hideClass: {
+            popup: "animate__animated animate__fadeOut",
+          },
+        });
+      }
+    });
+    if (email) {
+      Swal.fire(`Entered email: ${email}`);
+    }
+  };
   return (
     <div className="container">
       <motion.header initial="hidden" animate={"visible"} variants={container}>
@@ -56,7 +101,7 @@ const Cards = () => {
             </li>
           </ul>
           <div className="center-btn">
-            <button className="btn btn-white text-small">
+            <button className="btn btn-white text-small" onClick={Modal}>
               <strong>Get started</strong>
             </button>
           </div>
@@ -94,7 +139,9 @@ const Cards = () => {
             </li>
           </ul>
           <div className="center-btn">
-            <button className="btn btn-black text-small">Become a Pro</button>
+            <button className="btn btn-black text-small" onClick={Modal}>
+              Become a Pro
+            </button>
           </div>
         </motion.div>
         <motion.div className="card card-white-bg" whileHover={{ scale: 1.1 }}>
@@ -131,7 +178,7 @@ const Cards = () => {
             </li>
           </ul>
           <div className="center-btn">
-            <button className="btn btn-blue text-small">
+            <button className="btn btn-blue text-small" onClick={Modal}>
               <strong>Get Teams</strong>
             </button>
           </div>
@@ -147,7 +194,7 @@ const Cards = () => {
             Jump2Digital2022 Frontend Hackathon Entry - Nuwe
           </a>
           <span className="footer-margin">| Coded with ❤️ by</span>
-          <a href="https://github.com/PabloParra">Pabl0Parra</a>
+          <a href="https://github.com/Pabl0Parra">Pabl0Parra</a>
         </div>
       </footer>
     </div>
