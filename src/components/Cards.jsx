@@ -30,7 +30,6 @@ const Cards = () => {
           <p className="plan text-small text-gray">Starter</p>
           <div className="price text-black text-xl">
             <p className="text-pureBlack">Free</p>
-            {/* <p className="price-number text-xl"></p> */}
           </div>
           <ul className="features text-default text-gray">
             <li className="item">
@@ -69,7 +68,7 @@ const Cards = () => {
           />
           <div className="price text-white">
             <p>Pro</p>
-            <p className="price-number text-xl">$249.99 / year</p>
+            <p className="price-number text-xl">$49</p>
           </div>
           <ul className="features text-default text-white">
             <li className="item">
@@ -106,13 +105,7 @@ const Cards = () => {
 
           <div className="price text-black">
             <p>Teams</p>
-            <p className="price-number text-pureBlack text-xl">
-              $399.99 / year
-            </p>
-            {/* <p className="unit text-xl">              <strong>
-                <span>&#36;</span>99
-              </strong>
-            </p> */}
+            <p className="price-number text-pureBlack text-xl">$99</p>
           </div>
           <ul className="features text-default text-gray">
             <li className="item">
