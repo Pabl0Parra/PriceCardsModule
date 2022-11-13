@@ -188,13 +188,20 @@ const Cards = () => {
         <div className="attribution">
           <span className="footer-margin">Challenge by</span>
           <a
-            href="hhttps://nuwe.io/dev/challenges/jump2digital2022-frontend"
+            href="https://barcelonadigitaltalent.com/jump2digital-2022/"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Jump2Digital2022 Frontend Hackathon Entry - Nuwe
           </a>
           <span className="footer-margin">| Coded with ❤️ by</span>
-          <a href="https://github.com/Pabl0Parra">Pabl0Parra</a>
+          <a
+            href="https://github.com/Pabl0Parra"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Pabl0Parra
+          </a>
         </div>
       </footer>
     </div>
